@@ -1,0 +1,26 @@
+﻿@page
+@model WebApplication1.Pages.IndexModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    This is the Index.
+    <form method="post">
+        <div>X: <input asp-for="X" /></div>
+        <div>Y: <input asp-for="Y" /></div>
+        <div><span>@Model.Answer</span></div>
+        <div>
+            <button asp-page-handler="Add">Add</button>
+            <button asp-page-handler="Subtract">Subtract</button>
+        </div>
+    </form>
+</body>
+</html>
